@@ -4,9 +4,8 @@ gl = !git config --global -l
 gle = !git config --global --edit
 
 # Logs
-lc = !git log -1 HEAD --graph --stat
-ls = log -10 HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph
-lsn = log -5 HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat
+ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph;}; f"
+lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
 
 # Commits and inits
 ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
