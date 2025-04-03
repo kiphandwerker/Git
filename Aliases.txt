@@ -1,11 +1,20 @@
 [alias]
+# Global Options
 	gl = !git config --global -l
 	gle = !git config --global --edit
+
+# Logs
 	lc = !git log -1 HEAD --graph --stat
-	ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
-	newinit = !git init && git branch -m master main && touch .gitignore
-	s = !git status
-	gmain = !git checkout main
-	eow = !git gmain && git merge wip && git push
 	ls = log -10 HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph
 	lsn = log -5 HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat
+
+# Commits and inits
+  ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
+	newinit = !git init && git branch -m master main && touch .gitignore
+
+# Status
+  s = !git status
+
+# Push and branches
+	gmain = !git checkout main
+	eow = !git gmain && git merge wip && git push
