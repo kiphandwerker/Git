@@ -10,7 +10,7 @@ ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C
 lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
 
 # Commits and inits
-ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
+ict = !git add . && git commit -m 'Initial commit'
 gi = !git init && git branch -m master main && touch .gitignore
 
 # Status
