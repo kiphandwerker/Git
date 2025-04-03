@@ -4,12 +4,14 @@ gl = !git config --global -l
 gle = !git config --global --edit
 
 # Logs
-ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph;}; f"
-lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(10,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
+lc = !git log -1 HEAD --graph --stat
+nhead = "!f() { git log -n ${1:-5} HEAD;}; f"
+ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph;}; f"
+lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
 
 # Commits and inits
 ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
-newinit = !git init && git branch -m master main && touch .gitignore
+gi = !git init && git branch -m master main && touch .gitignore
 
 # Status
 s = !git status
