@@ -28,7 +28,7 @@ Outputs the log with stats for the last 8 commits
 # Commits and inits
 <ul>
 <li> <strong>ict:</strong> Adds all files and commits with "Initial commit" message
-<li> <strong>gi:</strong> New commit that changes branch from master to main and creates .gitignore
+<li> <strong>gi:</strong> New commit that changes branch from master to main and creates .gitignore and README.md
 </ul>
 
 # Status
