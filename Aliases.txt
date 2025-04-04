@@ -11,7 +11,7 @@ lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C
 
 # Commits and inits
 ict = !git add . && git commit -m 'Initial commit'
-gi = !git init && git branch -m master main && touch .gitignore
+gi = !git init && git branch -m master main && touch .gitignore && touch README.md
 
 # Status
 s = !git status
