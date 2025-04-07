@@ -9,6 +9,7 @@
 	lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
 
 	# Commits
+	ac = "!f() { last=\"${@: -1}\"; files=(\"${@:1:$#-1}\"); git add \"${files[@]}\" && git commit -m \"$last\"; }; f"
 	ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
 
 	# Inits
@@ -20,3 +21,4 @@
 	# Push and branches
 	gmain = !git checkout main
 	eow = !git gmain && git merge wip && git push
+	
