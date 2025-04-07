@@ -1,21 +1,22 @@
 [alias]
-# Global Options
-gl = !git config --global -l
-gle = !git config --global --edit
+	# Global Options
+	gl = !git config --global -l
+	gle = !git config --global --edit
 
-# Logs
-lc = !git log -1 HEAD --graph --stat
-nhead = "!f() { git log -n ${1:-5} HEAD;}; f"
-ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph;}; f"
-lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
+	# Logs
+	lc = !git log -1 HEAD --graph --stat
+	ls = "!f() { git log -n ${1:-10} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph;}; f"
+	lsn = "!f() { git log -n ${1:-5} HEAD --pretty=tformat:'%C(yellow)%h %C(red)[ %C(green)%<(10,trunc)%ar %C(blue)%<(4,trunc)-%aN %C(red)] %C(reset)%s%C(auto) %C(red)%d' --decorate --graph --stat;}; f"
 
-# Commits and inits
-ict = !git add . && git commit -m 'Initial commit'
-gi = !git init && git branch -m master main && touch .gitignore && touch README.md
+	# Commits
+	ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
 
-# Status
-s = !git status
+	# Inits
+	gi = !git init && git branch -m master main && touch .gitignore
 
-# Push and branches
-gmain = !git checkout main
-eow = !git gmain && git merge wip && git push
+	# Status
+	s = !git status
+
+	# Push and branches
+	gmain = !git checkout main
+	eow = !git gmain && git merge wip && git push
