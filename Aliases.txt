@@ -13,7 +13,7 @@
 	ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
 
 	# Inits
-	gi = !git init && git branch -m master main && touch .gitignore
+	gi = !git init && git branch -m master main && touch .gitignore && touch README.md
 
 	# Status
 	s = !git status
@@ -21,4 +21,3 @@
 	# Push and branches
 	gmain = !git checkout main
 	eow = !git gmain && git merge wip && git push
-	
