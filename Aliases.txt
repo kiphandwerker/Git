@@ -10,7 +10,7 @@
 
 	# Commits
 	ac = "!f() { last=\"${@: -1}\"; files=(\"${@:1:$#-1}\"); git add \"${files[@]}\" && git commit -m \"$last\"; }; f"
-	ict = !git add . && touch .gitignore && git commit -m 'Initial commit'
+	ict = !git add . && git commit -m 'Initial commit'
 
 	# Inits
 	gi = !git init && git branch -m master main && touch .gitignore && touch README.md
