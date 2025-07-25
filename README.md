@@ -11,12 +11,12 @@
 
 The log has been refurbished to be much more pleasant to look at. The structure is as follows:
 
-- $\color{yellow}{\textsf{hash}}$
-- $\color{red}{\textsf{[}}$
-- $\color{green}{\textsf{Author date ..}}$
-- $\color{teal}{\textsf{Author name}}$
-- $\color{red}{\textsf{]}}$
-- Commit message
+$\color{yellow}{\textsf{hash}}$
+$\color{red}{\textsf{[}}$
+$\color{green}{\textsf{Author date ..}}$
+$\color{teal}{\textsf{Author name}}$
+$\color{red}{\textsf{]}}$
+Commit message
 
 | Alias | Description                                 | Usage         | Equivalent Command           |
 |-------|---------------------------------------------|---------------|------------------------------|
