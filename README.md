@@ -1,5 +1,14 @@
 # Git commands I use regularly
 
+## Table of Contents
+
+- [Global Options](#global-options)
+- [Logs](#logs)
+- [Commits](#commits)
+- [Inits](#inits)
+- [Status](#status)
+- [Push and Branches](#push-and-branches)
+
 ## Global Options
 
 | Alias | Description                                              | Usage           | Equivalent Command                |
