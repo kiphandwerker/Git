@@ -2,128 +2,49 @@
 
 ## Global Options
 
-<ul>
-<li> <strong>gl:</strong> Displays the contents of the global config file in the terminal
+| Alias | Description                                              | Usage           | Equivalent Command                |
+|-------|---------------------------------------------------------|-----------------|-----------------------------------|
+| gl    | Displays the contents of the global config file          | `git gl`        | `git config --global -l`          |
+| gle   | Opens the global config file in the default editor       | `git gle`       | `git config --global --edit`      |
 
-```git
-git gl
-```
+## Logs
 
-This is equivilant to:
-
-```git
-git config --global -l
-```
-
-<li> <strong>gle:</strong> Opens the global config file in the default / editor of choice
-
-
-```git
-git gle
-```
-
-This is equivilant to:
-
-```git
-git config --global --edit
-```
-</ul>
-
-# Logs
 The log has been refurbished to be much more pleasant to look at. The structure is as follows:
 
-$\color{yellow}{\textsf{hash}}$
-$\color{red}{\textsf{[}}$
-$\color{green}{\textsf{Author date ..}}$
-$\color{teal}{\textsf{Author name}}$
-$\color{red}{\textsf{]}}$
-Commit message
+- $\color{yellow}{\textsf{hash}}$
+- $\color{red}{\textsf{[}}$
+- $\color{green}{\textsf{Author date ..}}$
+- $\color{teal}{\textsf{Author name}}$
+- $\color{red}{\textsf{]}}$
+- Commit message
 
+| Alias | Description                                 | Usage         | Equivalent Command           |
+|-------|---------------------------------------------|---------------|------------------------------|
+| ls    | Log with the last 5 commits                 | `git ls 5`    | `git log -5 HEAD`            |
+| lsn   | Log with the last 5 commits and the stats   | `git lsn 5`   | `git log -5 HEAD --stat`     |
 
-<ul>
-<li> <strong>ls: </strong> Log with the last 5 commits
+## Commits
 
-```git
-git ls 5
-```
+| Alias | Description                                         | Usage Example                                               | Equivalent Command                                             |
+|-------|-----------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------|
+| ac [files] [message]   | Adds files and commits with message                 | `git ac . "Adding all"`<br>`git ac file1/ file2/ "Updates"` | `git add . && git commit -m "Adding all"`<br>`git add file1/ file2/ && git commit -m "Updates"` |
+| ict   | Adds all files and commits with "Initial commit"    | `git ict`                                                   | `git add . && git commit -m "Initial commit"`                 |
 
-This is equivilant to :
+## Inits
 
-```git
-git log -5 HEAD
-```
+| Alias | Description                                                                 | Usage    | Equivalent Command                                                                 |
+|-------|-----------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------|
+| gi    | Creates a new git repo, renames branch, creates .gitignore and README.md    | `git gi` | `git init`<br>`git branch -m master main`<br>`touch .gitignore`<br>`touch README.md`|
 
-<li> <strong>ls: </strong> Log with the last 5 commits and the stats
+## Status
 
-```git
-git lsn 5
-```
+| Alias | Description           | Usage   |
+|-------|-----------------------|---------|
+| s     | Displays status log   | `git s` |
 
-This is equivilant to :
+## Push and Branches
 
-```git
-git log -5 HEAD --stat
-```
-</ul>
-
-# Commits
-<ul>
-<li> <strong>ac:</strong> Adds files and commits with message
-
-```git
-git ac . "Adding all"
-----or----
-git ac file1/ file2/ "Updates to file 1 and file2"
-```
-This is the equivilant to:
-
-```git
-git add . && git commit -m "Adding all"
-----or----
-git add file1/ file2/ && git commit -m "Updates to file 1 and file2"
-```
-
-
-
-<li> <strong>ict:</strong> Adds all files and commits with "Initial commit" message
-
-```git
-git ict
-```
-This is the equivilant to:
-
-```git
-git add . && git commit -m "Initial commit"
-```
-
-</ul>
-
-# Inits
-<ul>
-<li> <strong>gi:</strong> Creates a new git repo that changes branch from master to main and creates .gitignore and README.md
-
-
-```git 
-git gi
-```
-
-This is the equivilant to:
-
-```git
-git init
-git branch -m master main
-touch .gitignore
-touch README.md
-```
-</ul>
-
-# Status
-<ul>
-<li> <strong>s:</strong> Displays status log
-</ul>
-
-# Push and branches
-<ul>
-<li> <strong>gmain:</strong> Switches to main branch
-<li> <strong>eow:</strong> Go to main branch, merge with wip, and pushes
-</ul>
+| Alias  | Description                                         | Usage      |
+|--------|-----------------------------------------------------|------------|
+| gmain  | Switches to main branch                             | `git gmain`|
+| eow    | Go to main branch, merge with wip, and pushes       | `git eow`  |
